@@ -3,6 +3,16 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Task
 from .serializers import TodoSerializer
+from django.http import JsonResponse
+
+def api_root(request):
+    return JsonResponse({
+        "message": "Welcome to the Sala's To-Do List API!",
+        "endpoints": {
+            "List tasks": "/api/tasks/",
+            "Task detail": "/api/tasks/<id>/"
+        }
+    })
 
 @api_view(["GET", "POST"])
 def todo_list(request):
