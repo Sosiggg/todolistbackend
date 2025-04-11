@@ -15,10 +15,15 @@ class SecureHelloView(APIView):
 
 def api_root(request):
     return JsonResponse({
-        "message": "Welcome to the Sala's To-Do List API!",
+        "message": "Welcome to the Salas' To-Do List API!",
         "endpoints": {
             "List tasks": "/api/tasks/",
-            "Task detail": "/api/tasks/<id>/"
+            "Create task": "/api/tasks/",
+            "Task detail": "/api/tasks/<id>/",
+            "Update task": "/api/tasks/<id>/",
+            "Delete task": "/api/tasks/<id>/",
+            "Secure hello (requires token)": "/api/secure-hello/",
+            "Obtain Auth Token": "/api-token-auth/"
         }
     })
 

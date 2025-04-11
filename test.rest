@@ -1,0 +1,4 @@
+### Test Secure Hello API with Token Auth
+GET https://salastodolist-vcn5.onrender.com/api/secure-hello/ HTTP/1.1
+Authorization: Token 883aa870c9639608366cbf2c18d286910b21d5c6
+Content-Type: application/json
